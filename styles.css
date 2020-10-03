@@ -1,0 +1,87 @@
+/* globals  */
+body {
+    margin: 0 ;
+    font-family: 'Inter', sans-serif;    
+    background: var(--baseBackground);    
+  }
+  :root {
+    --baseBackground: white;
+    --switch: #5f616d;
+    --switchSpinner: white;
+    --lightGray: #f8f9fe;    
+  }  
+
+  .dark-mode {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+  .checkbox {
+    display:none;
+  }
+  .checkbox:checked ~ .switch:before{
+    transform: translateX(0px);
+  }
+  .switch {
+    /* border: 1px solid red; */
+    height: 40px;
+    display: block;
+    border-radius: 20px;
+    background: var(--switch);
+    width: 80px;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+  }
+  .switch::before {
+    justify-content: right;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: var(--switchSpinner);
+    border-radius: 50%;
+    transform: translateX(40px);
+    transition: .3s;
+    will-change: transform;
+  }
+  /* header  */
+  .header {
+    
+    background: var(--lightGray);
+    padding-bottom: 5px;
+    border-radius: 0 0 0 0;
+    padding-top: 5px;
+  }
+  
+  
+  @media screen and (min-width: 480px) {
+    
+  }
+  
+  @media screen and (min-width: 768px) {
+   
+  }
+  
+  @media screen and (min-width: 1024px) {
+    
+  }  
+
+  .is-dark-mode {
+     --baseBackground: #1d2029;
+     --lightGray: #080F1E;
+     --switchSpinner: #282943;
+     --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+     
+  }
+
+
+ /* particulas */
+#particles-js{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+ 
